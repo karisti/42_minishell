@@ -1,7 +1,7 @@
 # 42_minishell
 
 ## Description
-This project consists of creating our own little bash. A program that can parse a command and execute it with arguments.
+This project consists of creating our own little bash. A program that can parse a command and execute it with arguments. Developed by @gpernas- and @karisti-.
 
 ### Re-implemented features:
 - Runs executables from an absolute, relative or environment PATH (`/bin/ls` or `ls`), including arguments or options. `'` and `"` work the same as bash, except for multiline commands.
