@@ -6,14 +6,14 @@
 /*   By: karisti- <karisti-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 10:15:08 by karisti-          #+#    #+#             */
-/*   Updated: 2022/02/21 18:14:45 by karisti-         ###   ########.fr       */
+/*   Updated: 2023/11/04 14:52:49 by karisti-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINISHELL_H
 # define MINISHELL_H
 
-# include "../libft/libft.h"
+# include "../libft/includes/libft.h"
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
