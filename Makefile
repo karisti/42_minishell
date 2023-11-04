@@ -6,7 +6,7 @@
 #    By: karisti- <karisti-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/13 11:52:25 by karisti-          #+#    #+#              #
-#    Updated: 2023/11/04 14:12:35 by karisti-         ###   ########.fr        #
+#    Updated: 2023/11/04 15:04:49 by karisti-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,9 @@ OBJS 	=	$(patsubst $(SRCSFD)%.c, $(OBJSFD)%.o, $(SRCS))
 
 # Libraries
 LIBFT	=	libft/bin/libft.a
-RL		=	-L/Users/$(USER)/.brew/opt/readline/lib -I/Users/$(USER)/.brew/opt/readline/include -lreadline
+RL_LIB	=	-L/usr/local/opt/readline/lib #-L/Users/$(USER)/.brew/opt/readline/lib
+RL_INC	=	-I/usr/local/opt/readline/include#-I/Users/$(USER)/.brew/opt/readline/include
+RL		=	$(RL_LIB) $(RL_INC) -lreadline
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 # Compilation
@@ -99,7 +101,7 @@ $(OBJSFD):
 	@echo "\t[ $(GREEN)✔$(NONE) ] $@ directories"
 
 $(OBJSFD)%.o: $(SRCSFD)%.c
-	@$(COMP) $(CFLAGS) $(HDR_INC) -I/Users/$(USER)/.brew/opt/readline/include -o $@ -c $<
+	@$(COMP) $(CFLAGS) $(HDR_INC) $(RL_INC) -o $@ -c $<
 	@echo "\t[ $(GREEN)✔$(NONE) ] $@ object"
 
 $(NAME): $(OBJSFD) $(OBJS)

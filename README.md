@@ -13,7 +13,9 @@ This project consists of creating our own little bash. A program that can parse 
 - Some "built-in" functions: `echo`, `pwd`, `cd`, `env`, `export`, `unset` and `exit`.
 
 ## Prerequisites
-- Nothing needed
+- Install readline `brew install readline`
+- Get installed path `brew info readline`
+- Set correct paths for `RL_LIB` and `RL_INC` in Makefile
 
 ## Usage
 - `make` for creating executable
